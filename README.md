@@ -1,2 +1,2 @@
 # app-gimp
-Push2Compute wrapper for Gimp editor in CentOS
+Jarvice wrapper for Gimp editor in CentOS

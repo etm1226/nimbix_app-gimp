@@ -1,0 +1,53 @@
+{
+    "name": "Gimp application",
+    "description": "wrapper application for Gimp",
+    "author": "jhegge",
+    "licensed": true,
+    "classifications": [
+        "Software Development"
+    ],
+    "machines": [
+        "n[0-10]"
+    ],
+    "vault-types": [
+        "FILE",
+        "BLOCK",
+        "BLOCK_ARRAY",
+        "OBJECT"
+    ],
+    "commands": {
+        "Server": {
+            "path": "/sbin/init",
+            "interactive": true,
+            "name": "Server",
+            "description": "Launch a session with all boot services, including SSH (if installed).  Connection address and credentials will appear in your web browser once available.",
+            "parameters": {}
+        },
+        "GUI": {
+            "path": "/usr/local/bin/nimbix_desktop",
+            "interactive": true,
+            "name": "GUI",
+            "description": "Run a GUI command, and connect interactively directly from your web browser (requires Nimbix Desktop in image).",
+            "parameters": {
+                "command": {
+                    "name": "Command",
+                    "description": "Command to run",
+                    "type": "STR",
+                    "positional": true,
+                    "required": true
+                }
+            }
+        },
+        "Gimp": {
+            "path": "/usr/bin/gimp",
+            "interactive": true,
+            "name": "Gimp",
+            "description": "Run Gimp command"
+        }
+    },
+    "image": {
+        "data": "",
+        "type": "image/png"
+    },
+    "id": "app_gimp"
+}
