@@ -46,9 +46,9 @@
             "parameters": {
                 "gimp": {
                     "name": "gimp",
-                    "description": "gimp binary",
+                    "description": "path to gimp binary",
                     "value": "/usr/bin/gimp",
-                    "type": "STR",
+                    "type": "CONST",
                     "positional": true,
                     "required": true
                 }
