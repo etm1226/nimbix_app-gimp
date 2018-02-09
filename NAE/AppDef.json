@@ -39,10 +39,20 @@
             }
         },
         "Gimp": {
-            "path": "/usr/bin/gimp",
+            "path": "/usr/local/bin/nimbix_desktop",
             "interactive": true,
             "name": "Gimp",
-            "description": "Run Gimp command"
+            "description": "Run Gimp command",
+            "parameters": {
+                "gimp": {
+                    "name": "gimp",
+                    "description": "gimp binary",
+                    "value": "/usr/bin/gimp",
+                    "type": "STR",
+                    "positional": true,
+                    "required": true
+                }
+            }
         }
     },
     "image": {
