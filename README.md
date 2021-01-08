@@ -1,2 +1,3 @@
 # app-gimp
-Jarvice wrapper for Gimp editor in CentOS
+
+JARVICE wrapper for Gimp [Gimp](https://www.gimp.org/) image editor in CentOS
