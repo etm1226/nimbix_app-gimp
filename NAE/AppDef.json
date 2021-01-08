@@ -7,8 +7,6 @@
     "Image Editing"
   ],
   "machines": [
-    "nc[3-9]*",
-    "nc[1-9][0-9]*",
     "n[2-9]*",
     "n[1-9][0-9]*"
   ],
@@ -23,8 +21,8 @@
       "path": "/usr/local/bin/nimbix_desktop",
       "interactive": true,
       "publicip": true,
-      "name": "Gimp",
-      "description": "Start an interactive desktop session",
+      "name": "Gimp GUI",
+      "description": "Start an interactive desktop session with Gimp multi-window mode",
       "parameters": {
         "toolbox": {
           "name": "toolbox",
