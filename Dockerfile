@@ -1,15 +1,15 @@
-FROM centos:7
+FROM ubuntu:jammy
 LABEL maintainer="Nimbix, Inc." \
       license="BSD"
 
 WORKDIR /tmp
 
-# Install image-common for X, VNC and common utilities
-RUN curl -H 'Cache-Control: no-cache' \
-        https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh \
-        | bash -s -- --setup-nimbix-desktop
-
-RUN yum install -y gimp
+# Add jarvice-desktop for Desktop support, FFmpeg and codecs
+RUN apt-get -y update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y install ca-certificates curl gimp --no-install-recommends && \
+    curl -H 'Cache-Control: no-cache' \
+        https://raw.githubusercontent.com/nimbix/jarvice-desktop/master/install-nimbix.sh \
+        | bash
 
 COPY NAE/AppDef.json /etc/NAE/AppDef.json
-RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
+#RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
